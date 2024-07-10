@@ -1,0 +1,139 @@
+:root {
+  --type-bug: 168, 184, 32;
+  --type-normal: 168, 168, 120;
+  --type-fire: 240, 128, 48;
+  --type-water: 104, 144, 240;
+  --type-grass: 120, 200, 80;
+  --type-electric: 248, 208, 48;
+  --type-ice: 152, 216, 216;
+  --type-fighting: 192, 48, 40;
+  --type-poison: 160, 64, 160;
+  --type-ground: 224, 192, 104;
+  --type-flying: 168, 144, 240;
+  --type-psychic: 248, 88, 136;
+  --type-rock: 184, 160, 56;
+  --type-ghost: 112, 88, 152;
+  --type-dragon: 112, 56, 248;
+  --type-dark: 112, 88, 72;
+  --type-steel: 184, 184, 208;
+  --type-fairy: 238, 153, 172;
+  --color1: #12c2e9;
+  --color2: #c471ed;
+  --color3: #f64f59;
+}
+
+.backHome {
+  width: 100%;
+  background-color: rgba(var(--pokeType), 0.3);
+  height: 5%;
+  display: grid;
+  align-content: center;
+
+  .backHomeLink {
+    height: 100%;
+    padding-left: 30px;
+  }
+}
+
+.partialDetail {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 95%;
+  align-items: center;
+  justify-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: rgba(var(--pokeType), 0.3);
+  gap: 20px;
+}
+
+.typeStat {
+  width: 100%;
+}
+
+.pokeTypes {
+  text-align: center;
+
+  .pokeType {
+    width: 200px;
+    color: #fff;
+    background-color: rgba(var(--pokeType));
+  }
+}
+
+.wenleiNameImage {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  justify-items: center;
+  align-content: center;
+
+  .name {
+    font-weight: bold;
+    font-size: 35px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .gif {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.progressCircles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 10px;
+}
+
+.pokeInfo {
+  padding: 10px;
+  width: 100%;
+}
+
+.progressBars {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  align-items: center;
+
+  .statName {
+    font-size: 20px;
+    text-align: left;
+    width: 100%;
+  }
+
+  .progressBar {
+    display: block;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    height: 20%;
+    width: 100%;
+    background-color: white;
+
+    .bar {
+      background-color: #6c5ce7;
+      height: 100%;
+      width: 1%;
+      transition: width 1s linear;
+      animation: progress 1s linear forwards;
+    }
+
+    @keyframes progress {
+      0% {
+        width: 1%;
+      }
+      100% {
+        width: var(--progress-width);
+      }
+    }
+  }
+}
